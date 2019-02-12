@@ -26,4 +26,11 @@ describe('Account', () => {
       expect(account.history[0]).toContain("")
     })
   })
+
+  describe('#withdraw()', () => {
+    it('withdraw value is recorded in account history', () => {
+      account.withdraw(50)
+      expect(account.history).toContain(-50)
+    })
+  })
 })

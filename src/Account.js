@@ -9,3 +9,7 @@ Account.prototype.deposit = function(Number) {
   let credit = ""
   this.history.push([depositDate, Number, credit])
 }
+
+Account.prototype.withdraw = function(Number) {
+  this.history.push(-Number)
+}
