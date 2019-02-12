@@ -3,5 +3,6 @@ function Account () {
 }
 
 Account.prototype.deposit = function(Number) {
-  this.history.push(Number)
+  date = new Date().toLocaleDateString()
+  this.history.push(date, Number)
 }
