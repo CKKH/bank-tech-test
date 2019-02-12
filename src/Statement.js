@@ -1,6 +1,6 @@
 'use strict'
 
-function Statement (account) {
+function Statement(account) {
   this.transactions = account.history
 }
 
