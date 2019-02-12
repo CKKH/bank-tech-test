@@ -4,14 +4,12 @@ function Account () {
   this.history = []
 }
 
-Account.prototype.deposit = function(Number) {
+Account.prototype.deposit = function(Number, balance) {
   let depositDate = new Date().toLocaleDateString()
-  let credit = ""
-  this.history.push([depositDate, Number, credit])
+  this.history.push([depositDate, Number])
 }
 
 Account.prototype.withdraw = function(Number) {
   let withdrawDate = new Date().toLocaleDateString()
-  let debit = ""
-  this.history.push([withdrawDate, debit, - Number])
+  this.history.push([withdrawDate, - Number])
 }

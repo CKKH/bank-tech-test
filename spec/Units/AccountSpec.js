@@ -20,11 +20,6 @@ describe('Account', () => {
       account.deposit(50)
       expect(account.history[0]).toContain(date)
     })
-
-    it('credit is recorded as empty string in account history', () => {
-      account.deposit(50)
-      expect(account.history[0]).toContain("")
-    })
   })
 
   describe('#withdraw()', () => {
@@ -37,11 +32,6 @@ describe('Account', () => {
       let date = new Date().toLocaleDateString()
       account.withdraw(50)
       expect(account.history[0]).toContain(date)
-    })
-
-    it('debit is recorded as empty string in account history', () => {
-      account.withdraw(50)
-      expect(account.history[0]).toContain("")
     })
   })
 })
