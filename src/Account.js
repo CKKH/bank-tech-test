@@ -11,5 +11,6 @@ Account.prototype.deposit = function(Number) {
 }
 
 Account.prototype.withdraw = function(Number) {
-  this.history.push(-Number)
+  let withdrawDate = new Date().toLocaleDateString()
+  this.history.push(withdrawDate, - Number)
 }

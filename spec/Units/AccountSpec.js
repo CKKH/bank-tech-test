@@ -32,5 +32,11 @@ describe('Account', () => {
       account.withdraw(50)
       expect(account.history).toContain(-50)
     })
+
+    it('withdraw date is recorded in account history', () => {
+      let date = new Date().toLocaleDateString()
+      account.withdraw(50)
+      expect(account.history).toContain(date)
+    })
   })
 })
