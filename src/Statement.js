@@ -2,11 +2,10 @@
 
 function Statement (account) {
   this.transactions = account.history
-  this.balance = 0
 }
 
 Statement.prototype.calculateBalance = function () {
-  let balance = this.balance
+  let balance = 0
   this.transactions.forEach(function(transaction) {
     balance += transaction[1]
     transaction.push(balance)
