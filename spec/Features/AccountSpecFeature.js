@@ -1,3 +1,5 @@
+'use strict'
+
 describe('Opening an account, depositing, withdrawing, and printing balance', () => {
   it('Works', () => {
     account = new Account()

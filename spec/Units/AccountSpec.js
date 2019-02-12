@@ -1,14 +1,24 @@
+/* global describe, it, expect, beforeEach */
+
+'use strict'
+
 describe('Account', () => {
-  it('deposit value is recorded in account history', () => {
+  let account
+
+  beforeEach( () => {
     account = new Account()
-    account.deposit(50)
-    expect(account.history).toContain(50)
   })
 
-  it('deposit date is recorded in account history', () => {
-    account = new Account()
-    date = new Date().toLocaleDateString()
-    account.deposit(50)
-    expect(account.history).toContain(date)
+  describe('#deposit()', () => {
+    it('deposit value is recorded in account history', () => {
+      account.deposit(50)
+      expect(account.history).toContain(50)
+    })
+
+    it('deposit date is recorded in account history', () => {
+      let depositDate = new Date().toLocaleDateString()
+      account.deposit(50)
+      expect(account.history).toContain(depositDate)
+    })
   })
 })
