@@ -30,18 +30,18 @@ describe('Account', () => {
   describe('#withdraw()', () => {
     it('withdraw value is recorded in account history', () => {
       account.withdraw(50)
-      expect(account.history).toContain(-50)
+      expect(account.history[0]).toContain(-50)
     })
 
     it('withdraw date is recorded in account history', () => {
       let date = new Date().toLocaleDateString()
       account.withdraw(50)
-      expect(account.history).toContain(date)
+      expect(account.history[0]).toContain(date)
     })
 
     it('debit is recorded as empty string in account history', () => {
       account.withdraw(50)
-      expect(account.history).toContain("")
+      expect(account.history[0]).toContain("")
     })
   })
 })
