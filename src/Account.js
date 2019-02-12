@@ -6,5 +6,6 @@ function Account () {
 
 Account.prototype.deposit = function(Number) {
   let depositDate = new Date().toLocaleDateString()
-  this.history.push([depositDate, Number])
+  let credit = ""
+  this.history.push([depositDate, Number, credit])
 }

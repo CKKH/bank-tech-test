@@ -20,5 +20,10 @@ describe('Account', () => {
       account.deposit(50)
       expect(account.history[0]).toContain(date)
     })
+
+    it('credit is recorded as empty string in account history', () => {
+      account.deposit(50)
+      expect(account.history[0]).toContain("")
+    })
   })
 })
