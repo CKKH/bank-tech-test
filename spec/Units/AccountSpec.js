@@ -12,13 +12,13 @@ describe('Account', () => {
   describe('#deposit()', () => {
     it('deposit value is recorded in account history', () => {
       account.deposit(50)
-      expect(account.history).toContain(50)
+      expect(account.history[0]).toContain(50)
     })
 
     it('deposit date is recorded in account history', () => {
-      let depositDate = new Date().toLocaleDateString()
+      let date = new Date().toLocaleDateString()
       account.deposit(50)
-      expect(account.history).toContain(depositDate)
+      expect(account.history[0]).toContain(date)
     })
   })
 })
