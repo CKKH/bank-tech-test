@@ -38,5 +38,10 @@ describe('Account', () => {
       account.withdraw(50)
       expect(account.history).toContain(date)
     })
+
+    it('debit is recorded as empty string in account history', () => {
+      account.withdraw(50)
+      expect(account.history).toContain("")
+    })
   })
 })
