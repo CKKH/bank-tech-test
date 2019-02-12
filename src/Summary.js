@@ -2,10 +2,10 @@
 
 function Summary(statement) {
   this.transactions = statement.transactions
-  this.list = []
 }
 
-Summary.prototype.format = function () {
+const display = Summary.prototype.format = function () {
+  let list = []
   let date
   let credit
   let debit
@@ -16,6 +16,7 @@ Summary.prototype.format = function () {
     credit = (transaction[1] > 0) ? transaction[1].toFixed(2) : ""
     debit = (transaction[1] < 0) ? transaction[1].toFixed(2) : ""
     balance = transaction[2].toFixed(2)
+    list.push([`${date} || ${credit} || ${debit} || ${balance}`])
   })
-  this.list.push([`${date} || ${credit} || ${debit} || ${balance}`])
+  return list
 }

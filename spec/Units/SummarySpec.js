@@ -15,7 +15,7 @@ describe('Summary', () => {
       statement.calculateBalance()
       summary = new Summary(statement)
       let formattedStatement = summary.format()
-      expect(summary.list[0]).toEqual(["12/02/2019 || 10.00 ||  || 10.00"])
+      expect(formattedStatement[0]).toEqual(["12/02/2019 || 10.00 ||  || 10.00"])
     })
   })
 })
