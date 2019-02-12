@@ -6,9 +6,12 @@ describe('Statement', () => {
   let account
   let statement
 
+  beforeEach( () => {
+    account = new Account()
+  })
+
   describe('#calculateBalance', () => {
     it('records increase in running account balance for deposits', () => {
-      account = new Account()
       account.deposit(10)
       statement = new Statement(account)
       statement.calculateBalance()
@@ -16,7 +19,6 @@ describe('Statement', () => {
     })
 
     it('records decrease in running account balance for withdrawals', () => {
-      account = new Account()
       account.withdraw(10)
       statement = new Statement(account)
       statement.calculateBalance()
