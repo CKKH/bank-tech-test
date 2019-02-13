@@ -3,11 +3,11 @@
 function Balance() {
 }
 
-Balance.prototype.calculate = function (transactions) {
-  if (transactions.length === 1) {
-    transactions[0].push(transactions[0][1])
-  } else if (transactions.length > 0) {
-    let balance = (transactions[transactions.length -2][1]) + (transactions[transactions.length -1][1])
-    transactions[transactions.length -1].push(balance)
+Balance.prototype.calculate = function (t) {
+  if (t.length === 1) {
+    t[0].push(t[0][1])
+  } else if (t.length > 0) {
+    let balance = (t[t.length -2][2]) + (t[t.length -1][1])
+    t[t.length -1].push(balance)
   }
 }

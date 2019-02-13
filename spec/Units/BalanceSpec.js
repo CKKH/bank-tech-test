@@ -2,27 +2,27 @@
 
 'use strict'
 
-describe('Statement', () => {
-  let account
-  let statement
+describe('Balance', () => {
+  let date
+  let transactions
+  let balance
 
   beforeEach( () => {
-    account = new Account()
+    date = new Date().toLocaleDateString()
+    balance = new Balance()
   })
 
-  describe('#calculateBalance', () => {
-    it('records increase in running account balance for deposits', () => {
-      account.deposit(10)
-      statement = new Statement(account)
-      statement.calculateBalance()
-      expect(statement.transactions[0][2]).toEqual(10)
+  describe('#calculate', () => {
+    it('records increase in transaction balance after deposit', () => {
+      transactions = [[date, 50]]
+      balance.calculate(transactions)
+      expect(transactions[0][2]).toEqual(50)
     })
 
-    it('records decrease in running account balance for withdrawals', () => {
-      account.withdraw(10)
-      statement = new Statement(account)
-      statement.calculateBalance()
-      expect(statement.transactions[0][2]).toEqual(-10)
+    it('records decrease in transaction balance after withdrawal', () => {
+      transactions = [[date, -50]]
+      balance.calculate(transactions)
+      expect(transactions[0][2]).toEqual(-50)
     })
   })
 })

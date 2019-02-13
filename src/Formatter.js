@@ -1,10 +1,10 @@
 'use strict'
 
-function Summary() {
+function Formatter() {
   this.formattedList = []
 }
 
-const display = Summary.prototype.format = function () {
+Formatter.prototype.format = function () {
   let list = []
   let date
   let credit
@@ -21,7 +21,7 @@ const display = Summary.prototype.format = function () {
   return this.formattedList = list
 }
 
-Summary.prototype.print = function() {
+Formatter.prototype.print = function() {
   console.log("date || credit || debit || balance")
   this.formattedList.slice().reverse().forEach(function(transaction) {
     console.log(transaction)

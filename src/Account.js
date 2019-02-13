@@ -1,8 +1,7 @@
 'use strict'
 
-function Account (balance = new Balance()) {
+function Account (balance = new Balance(), formatter = new Formatter()) {
   this.transactions = []
-  this.statement = []
   this.balance = balance
 }
 

@@ -2,7 +2,7 @@
 
 'use strict'
 
-describe('Summary', () => {
+describe('Formatter', () => {
   let account
   let statement
   let summary
