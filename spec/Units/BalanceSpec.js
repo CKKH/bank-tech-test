@@ -8,7 +8,7 @@ describe('Balance', () => {
   let balance
 
   beforeEach( () => {
-    date = new Date().toLocaleDateString()
+    date = '14/02/2019'
     balance = new Balance()
   })
 

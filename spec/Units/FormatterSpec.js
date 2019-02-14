@@ -5,7 +5,7 @@
 describe('Formatter', () => {
   describe('#process', () => {
     it('formats transaction for printing', () => {
-      let date = new Date().toLocaleDateString()
+      let date = "14/02/2019"
       let transaction = [[date, 10, 10]]
       let formatter = new Formatter()
       let formattedStatement = formatter.process(transaction)

@@ -5,7 +5,7 @@
 describe('Printer', () => {
   describe('#run', () => {
     it('returns printed statement', () => {
-      let date = new Date().toLocaleDateString()
+      let date = "14/02/2019"
       let transactions = [[date, 10, 10]]
       let printer = new Printer()
       let statement = printer.run(transactions)

@@ -13,7 +13,7 @@ describe('Debit', () => {
 
   describe('#generate', () => {
     it('generates transaction with date', () => {
-      date = new Date().toLocaleDateString()
+      date = "14/02/2019"
       transaction = debit.generate(50)
       expect(transaction[0]).toEqual(date)
     })
