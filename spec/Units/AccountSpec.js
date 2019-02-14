@@ -4,11 +4,10 @@
 
 describe('Account', () => {
   let account
-  let balance
+  let date
 
   beforeEach( () => {
-    balance = new Balance()
-    account = new Account(balance)
+    account = new Account()
   })
 
   describe('#deposit()', () => {
@@ -18,13 +17,12 @@ describe('Account', () => {
     })
 
     it('deposit date is recorded in transactions', () => {
-      let date = new Date().toLocaleDateString()
+      date = new Date().toLocaleDateString()
       account.deposit(50)
       expect(account.transactions[0]).toContain(date)
     })
 
-    it('balance after deposit recorded in transactions', () => {
-      let date = new Date().toLocaleDateString()
+    it('account balance grows with deposit transactions', () => {
       account.deposit(50)
       account.deposit(50)
       expect(account.transactions[1]).toContain(100)
@@ -38,13 +36,12 @@ describe('Account', () => {
     })
 
     it('withdraw date recorded in transactions', () => {
-      let date = new Date().toLocaleDateString()
+      date = new Date().toLocaleDateString()
       account.withdraw(50)
       expect(account.transactions[0]).toContain(date)
     })
 
-    it('balance after withdrawal recorded in transactios', () => {
-      let date = new Date().toLocaleDateString()
+    it('account balance drops with withdrawal transactions', () => {
       account.withdraw(50)
       account.withdraw(50)
       expect(account.transactions[1]).toContain(-100)
