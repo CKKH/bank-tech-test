@@ -16,4 +16,3 @@ Formatter.prototype.process = function (transactions) {
   formattedTransactions.push(header)
   return formattedTransactions
 }
-

@@ -8,7 +8,7 @@ function Printer(formatter = new Formatter()) {
 
 Printer.prototype.run = function (transactions) {
   let formattedTransactions = this.formatter.process(transactions)
-  formattedTransactions.slice().reverse().forEach(function(transaction) {
-    console.log(transaction)
-  })
+  let statement = formattedTransactions.slice().reverse().join('\n')
+  console.log(statement)
+  return statement
 }
