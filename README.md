@@ -1,5 +1,3 @@
-Makers Academy week 7 tech test - showcasing OO design and TDD skills.
-
 ## Requirements & Running
 -------------------------
 
