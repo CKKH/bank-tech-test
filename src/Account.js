@@ -14,11 +14,13 @@ function Account (credit = new Credit(),
 Account.prototype.deposit = function (Number) {
   this.transactions.push(this.credit.generate(Number))
   this.balance.calculate(this.transactions)
+  return this.transactions[this.transactions.length - 1]
 }
 
 Account.prototype.withdraw = function (Number) {
   this.transactions.push(this.debit.generate(Number))
   this.balance.calculate(this.transactions)
+  return this.transactions[this.transactions.length -1]
 }
 
 Account.prototype.statement = function () {
