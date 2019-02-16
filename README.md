@@ -32,10 +32,10 @@ To run the project yourself run `open -a "Google Chrome" SpecRunner.html` whilst
 in the project repo root. Open your browser's dev tools. From the console, tab,
 interact with the project with the following:
 
-First create an account with `let account = new Account()`
-Make deposits with `account.deposit(number)` - number should be positive
-Make withdrawals with `account.withdraw(number)` - number should be positive
-Print the statement with `account.statement()`
+- First create an account with `let account = new Account()`
+- Make deposits with `account.deposit(number)` - number should be positive
+- Make withdrawals with `account.withdraw(number)` - number should be positive
+- Print the statement with `account.statement()`
 
 ### Code Structure
 ------------------
