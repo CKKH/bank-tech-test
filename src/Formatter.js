@@ -23,7 +23,8 @@ const assignBalance = Formatter.prototype.assignBalance = function (transaction)
   return balance
 }
 
-Formatter.prototype.process = function (transactions, assignDate, assignCredit, assignDebit, assignBalance) {
+Formatter.prototype.process = function (transactions, assignDate, 
+                                      assignCredit, assignDebit, assignBalance) {
   let formattedTransactions = []
   let header = 'date || credit || debit || balance'
   transactions.forEach(function (t) {
