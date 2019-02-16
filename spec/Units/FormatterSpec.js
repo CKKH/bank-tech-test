@@ -60,16 +60,14 @@ describe('Formatter', () => {
     it('formats transaction for printing', () => {
       let transactions = [[date, 10, 10]]
       let formattedStatement = formatter.process(transactions, assignDate,
-                                                 assignCredit, assignDebit,
-                                                 assignBalance)
+        assignCredit, assignDebit, assignBalance)
       expect(formattedStatement[1]).toEqual(`14/02/2019 || 10.00 ||  || 10.00`)
     })
 
     it('reverses order of transactions so most recent appears first', () => {
       let transactions = [[date, 10, 10], [date, 100, 110]]
       let formattedStatement = formatter.process(transactions, assignDate,
-                                                 assignCredit, assignDebit,
-                                                 assignBalance)
+        assignCredit, assignDebit,assignBalance)
       expect(formattedStatement[1]).toEqual(`14/02/2019 || 100.00 ||  || 110.00`)
     })
   })

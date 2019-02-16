@@ -7,7 +7,7 @@ describe('Credit', () => {
   let credit
   let transaction
 
-  beforeEach( () => {
+  beforeEach(() => {
     credit = new Credit()
   })
 

@@ -22,6 +22,6 @@ Account.prototype.withdraw = function (Number) {
 }
 
 Account.prototype.statement = function () {
-  this.printer.run(this.transactions)
-  return
+  let statement = this.printer.run(this.transactions)
+  return statement
 }

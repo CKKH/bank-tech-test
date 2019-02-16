@@ -8,8 +8,7 @@ function Printer (formatter = new Formatter()) {
 
 Printer.prototype.run = function (transactions) {
   let formattedTransactions = this.formatter.process(transactions, assignDate,
-                                                     assignCredit, assignDebit,
-                                                     assignBalance)
+    assignCredit, assignDebit, assignBalance)
   let statement = formattedTransactions.join('\n')
   return statement
 }
