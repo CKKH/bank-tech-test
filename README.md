@@ -53,6 +53,8 @@ and `Printer`. Each holds a single responsibility:
 - `Formatter` formats transactions
 - `Printer` takes the formatted transactions and returns a printed statement.
 
+![Project UML](images/project_UML_diagram.png)
+
 ### User Stories
 ---------------
 
