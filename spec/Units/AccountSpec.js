@@ -6,7 +6,7 @@ describe('Account', () => {
   let account
   let date
 
-  beforeEach( () => {
+  beforeEach(() => {
     account = new Account()
   })
 

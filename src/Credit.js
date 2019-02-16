@@ -1,6 +1,6 @@
 'use strict'
 
-function Credit() {
+function Credit () {
 }
 
 Credit.prototype.generate = function (Number) {

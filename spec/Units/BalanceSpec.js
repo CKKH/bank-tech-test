@@ -7,7 +7,7 @@ describe('Balance', () => {
   let transactions
   let balance
 
-  beforeEach( () => {
+  beforeEach(() => {
     date = '14/02/2019'
     balance = new Balance()
   })

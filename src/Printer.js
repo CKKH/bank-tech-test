@@ -2,13 +2,14 @@
 
 'use strict'
 
-function Printer(formatter = new Formatter()) {
+function Printer (formatter = new Formatter()) {
   this.formatter = formatter
 }
 
 Printer.prototype.run = function (transactions) {
-  let formattedTransactions = this.formatter.process(transactions)
-  let statement = formattedTransactions.slice().reverse().join('\n')
-  console.log(statement)
+  let formattedTransactions = this.formatter.process(transactions, assignDate,
+                                                     assignCredit, assignDebit,
+                                                     assignBalance)
+  let statement = formattedTransactions.join('\n')
   return statement
 }
