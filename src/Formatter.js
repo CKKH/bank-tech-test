@@ -1,11 +1,11 @@
 'use strict'
 
-function Formatter () {
+function Formatter (dateValue = new DateValue()) {
+  this.dateValue = dateValue
 }
 
 const assignDate = Formatter.prototype.assignDate = function (transaction) {
-  let date = transaction[0]
-  return date
+  return this.dateValue.extract(transaction)
 }
 
 const assignCredit = Formatter.prototype.assignCredit = function (transaction) {
