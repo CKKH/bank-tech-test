@@ -1,3 +1,9 @@
+# Bank Tech Test
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/15ed39f99804fe19ca0f/maintainability)](https://codeclimate.com/github/CKKH/bank-tech-test/maintainability)
+
+My solution to the bank tech test challenge. I focussed on solid Object Oriented Design and building a solid test suite.
+
 ## Requirements & Running
 -------------------------
 
@@ -34,6 +40,9 @@ interact with the project with the following:
 - Make deposits with `account.deposit(number)` - number should be positive
 - Make withdrawals with `account.withdraw(number)` - number should be positive
 - Print the statement with `account.statement()`
+
+## Project Overview
+-------------------
 
 ### Code Structure
 ------------------
