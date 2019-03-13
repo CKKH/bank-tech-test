@@ -8,9 +8,9 @@ My solution to the bank tech test challenge. I focussed on solid Object Oriented
 -------------------------
 
 ### Dependancies
+----------------
 
----------------
-1. A browser. Two reccommendations are Google Chrome/Mozella Firefox
+1. Google Chrome
 
 2. From the command line navigate to your project directory and clone the repo:
 
@@ -25,7 +25,7 @@ cd bank-tech-test
 ![Test Results](images/jasmine_test_results.png)
 
 To run the test yourself run `open -a "Google Chrome" SpecRunner.html` whilst
-in the project repo root. Replace `Google Chrome` with your preferred browser.
+in the root of the project repo.
 
 ### Running project
 ------------------
