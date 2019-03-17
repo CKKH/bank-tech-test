@@ -33,7 +33,7 @@ in the root of the project repo.
 ![Running Project](images/running_project.png)
 
 To run the project yourself run `open -a "Google Chrome" SpecRunner.html` whilst
-in the project repo root. Open your browser's dev tools. From the console, tab,
+in the project repo root. Open your browser's dev tools. From the console tab
 interact with the project with the following:
 
 - First create an account with `let account = new Account()`
@@ -47,7 +47,7 @@ interact with the project with the following:
 ### Code Structure
 ------------------
 
-The code is structured with good Object Oriented Design principles in mind. It
+The code is structured with Object Oriented Design principles in mind. It
 is split into 6 classes, `Account`, `Debit`, `Credit`, `Balance`, `Formatter`,
 and `Printer`. Each holds a single responsibility:
 
